@@ -1,0 +1,149 @@
+/* ==========================================================================
+   BEAUTE - Jesmary Rossell | Estilos Personalizados & Tema Luxury Dermo
+   Paleta: #010101 (Onyx) | #2596be (Cyan Dermo) | #D4AF37 (Oro Champán)
+   ========================================================================== */
+
+:root {
+  --color-dark: #010101;
+  --color-dark-surface: #0c0f14;
+  --color-dark-card: #141923;
+  --color-teal: #2596be;
+  --color-teal-hover: #1e7a9c;
+  --color-teal-glow: rgba(37, 150, 190, 0.25);
+  --color-gold: #d4af37;
+  --color-gold-light: #f3e5ab;
+  --color-gold-glow: rgba(212, 175, 55, 0.25);
+  --glass-bg: rgba(20, 25, 35, 0.75);
+  --glass-border: rgba(212, 175, 55, 0.18);
+  --glass-border-teal: rgba(37, 150, 190, 0.25);
+}
+
+body {
+  background-color: var(--color-dark);
+  color: #f1f5f9;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.font-serif-luxury {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+}
+
+.glass-panel-teal {
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border-teal);
+}
+
+/* Gradientes de Oro y Dermo-Cyan */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #f5d77f 0%, #d4af37 50%, #aa820a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-teal-gradient {
+  background: linear-gradient(135deg, #6ee7b7 0%, #2596be 50%, #1e7a9c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #f5d77f 0%, #d4af37 50%, #aa820a 100%);
+}
+
+.bg-teal-gradient {
+  background: linear-gradient(135deg, #38bdf8 0%, #2596be 100%);
+}
+
+/* Bordes Brillantes */
+.border-gold-glow {
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+}
+
+.border-teal-glow {
+  border-color: rgba(37, 150, 190, 0.5);
+  box-shadow: 0 0 15px rgba(37, 150, 190, 0.2);
+}
+
+/* Transiciones suaves y hover en tarjetas de productos */
+.product-card {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px -10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(37, 150, 190, 0.25);
+  border-color: rgba(37, 150, 190, 0.6);
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.04);
+}
+
+.product-img {
+  transition: transform 0.5s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090c10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2596be;
+}
+
+/* Animaciones */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(37, 150, 190, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(37, 150, 190, 0.6);
+  }
+}
+
+.pulse-teal-glow {
+  animation: pulseGlow 2.5s infinite;
+}
+
+/* Badges */
+.badge-gold {
+  background: rgba(212, 175, 55, 0.15);
+  color: #f5d77f;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.badge-teal {
+  background: rgba(37, 150, 190, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(37, 150, 190, 0.3);
+}
+
+/* Carrusel Animado */
+.carousel-slide {
+  transition: opacity 0.7s ease-in-out;
+}
